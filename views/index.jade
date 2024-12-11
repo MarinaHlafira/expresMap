@@ -1,0 +1,19 @@
+extends layout
+block head 
+    link(rel='stylesheet', href='/node_modules/leaflet/dist/leaflet.css')
+
+block content
+  .container
+    .column.left      
+      form(id="search-form")
+         .search-box
+          input(type="text" name="query" placeholder="Поиск..." id="search-query")
+          button(type="submit")
+            i.fa.fa-search
+       ul(id="search-results")
+      ul(id="additional-data")
+    .column.right
+       div(id="map")
+  script(src='/node_modules/leaflet/dist/leaflet.js')
+  script(src='/javascripts/search.js')
+  
